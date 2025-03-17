@@ -9,10 +9,10 @@ public class TestBarrier {
 		
 		int nWorkers = 10;
 
-		// Barrier barrier = new BarrierImpl(nWorkers);
+		Barrier barrier = new SyncBarrier(nWorkers);
 		
 		/* this barrier is not working */
-		Barrier barrier = new FakeBarrier(nWorkers);
+		// Barrier barrier = new FakeBarrier(nWorkers);
 		
 		List<Worker> workers = new ArrayList<Worker>();
 		for (int i = 0; i < nWorkers; i++) {
